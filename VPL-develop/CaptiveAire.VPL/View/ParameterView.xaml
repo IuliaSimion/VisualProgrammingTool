@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="CaptiveAire.VPL.View.ParameterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:converters="clr-namespace:Cas.Common.WPF.Converters;assembly=Cas.Common.WPF"
+             xmlns:viewModel="clr-namespace:CaptiveAire.VPL.ViewModel"
+             xmlns:vpl="clr-namespace:CaptiveAire.VPL"
+             xmlns:controls="clr-namespace:Cas.Common.WPF.Controls;assembly=Cas.Common.WPF"
+             mc:Ignorable="d" 
+             x:ClassModifier="internal"
+             d:DataContext="{d:DesignInstance vpl:Parameter, d:IsDesignTimeCreatable=False}">
+
+    <UserControl.Resources>
+        <converters:CollapsedWhenFalseConverter x:Key="CollapsedWhenFalseConverter"/>
+
+        <Style TargetType="FrameworkElement" x:Key="CollapsedWhenNext">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=Operator}" Value="{x:Null}">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="Transparent" IsHitTestVisible="True">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0" Text="{Binding Path=Prefix}" VerticalAlignment="Center" Margin="2"/>
+
+        <Grid Grid.Column="1" IsHitTestVisible="True" Background="Transparent">
+
+            <Rectangle  Style="{StaticResource CollapsedWhenNext}" MinWidth="20" MinHeight="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Fill="LightYellow" IsHitTestVisible="False" />
+
+            <ContentControl Style="{StaticResource CollapsedWhenNext}" VerticalAlignment="Center" HorizontalAlignment="Stretch" Content="{Binding Path=Editor}" />
+            
+            <ContentControl Content="{Binding Path=Operator}" HorizontalAlignment="Stretch" />
+            
+            <Rectangle Fill="Red" Opacity="0.6" Visibility="{Binding Path=IsDraggingOver, Converter={StaticResource CollapsedWhenFalseConverter}}"/>
+
+        </Grid>
+
+
+        <TextBlock Grid.Column="2" Text="{Binding Path=Postfix}" VerticalAlignment="Center" Margin="2" />
+
+    </Grid>
+</UserControl>

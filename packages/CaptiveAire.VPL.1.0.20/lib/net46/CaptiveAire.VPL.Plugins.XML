@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CaptiveAire.VPL.Plugins</name>
+    </assembly>
+    <members>
+        <member name="M:CaptiveAire.VPL.Plugins.Annotations.AnnotationResources.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Plugins.Annotations.AnnotationView">
+            <summary>
+            Interaction logic for AnnotationView.xaml
+            </summary>
+            <summary>
+            AnnotationView
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.Annotations.AnnotationView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Plugins.Annotations.CommentView">
+            <summary>
+            Interaction logic for CommentView.xaml
+            </summary>
+            <summary>
+            CommentView
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.Annotations.CommentView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Plugins.Functions.CallFunctionView">
+            <summary>
+            Interaction logic for CallFunctionView.xaml
+            </summary>
+            <summary>
+            CallFunctionView
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.Functions.CallFunctionView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Plugins.Functions.FunctionSelectionDialogView">
+            <summary>
+            Interaction logic for FunctionSelectionDialogView.xaml
+            </summary>
+            <summary>
+            FunctionSelectionDialogView
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.Functions.FunctionSelectionDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Plugins.Control.IfElseStatement">
+            <summary>
+            
+            </summary>
+            <remarks>
+            For backwards compatibility, the If / Else blocks use the following ids:
+            - If            : "0"
+            - Else If       : "If_1"
+            - Else If       : "If_2"
+            - Else          : "1"
+            </remarks>
+        </member>
+        <member name="T:CaptiveAire.VPL.Plugins.PluginElementIds">
+            <summary>
+            Ids for system element types.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Plugins.SystemPluginFactory">
+            <summary>
+            Factory for system plugins.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateLogicalPlugin">
+            <summary>
+            Creates the logical plugin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateComparisonPlugin">
+            <summary>
+            Creates the comparison plugin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateControlPlugin">
+            <summary>
+            Create the control plugin (has elements such as "Wait", "If /Else"
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateMathPlugin">
+            <summary>
+            Create the math plugin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateFunctionsPlugin">
+            <summary>
+            Provides support for calling functions.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateAnnotationPlugin">
+            <summary>
+            Creates the annotation plugin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateDatePlugin">
+            <summary>
+            Creates the date plugin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Plugins.SystemPluginFactory.CreateAllPlugins">
+            <summary>
+            Creates all System Plugins.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

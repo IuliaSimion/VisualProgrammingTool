@@ -1,0 +1,754 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cas.Common.WPF</name>
+    </assembly>
+    <members>
+        <member name="T:Cas.Common.WPF.Behaviors.BindableSelectedTreeViewItemBehavior">
+            <summary>
+            Allows the selected item property to be bound for MVVM.
+            </summary>
+            <remarks>
+            Got this from here: Seems to work fine
+            http://stackoverflow.com/a/5118406/232566
+            </remarks>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.BindableSelectedTreeViewItemBehavior.SelectedItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.BindableSelectedTreeViewItemBehavior.SelectedItemProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.BindableSelectedTreeViewItemBehavior.OnAttached">
+            <summary>
+            Called after the behavior is attached to an AssociatedObject.
+            </summary>
+            <remarks>
+            Override this to hook up functionality to the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.BindableSelectedTreeViewItemBehavior.OnDetaching">
+            <summary>
+            Called when the behavior is being detached from its AssociatedObject, but before it has actually occurred.
+            </summary>
+            <remarks>
+            Override this to unhook functionality from the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="T:Cas.Common.WPF.Behaviors.CloseableBehavior">
+            <summary>
+            Provides a simple interface for windows that should be closeable from their view model.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.CloseableBehavior.OnAttached">
+            <summary>
+            Called after the behavior is attached to an AssociatedObject.
+            </summary>
+            <remarks>
+            Override this to hook up functionality to the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.CloseableBehavior.OnDetaching">
+            <summary>
+            Called when the behavior is being detached from its AssociatedObject, but before it has actually occurred.
+            </summary>
+            <remarks>
+            Override this to unhook functionality from the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="T:Cas.Common.WPF.Behaviors.DraggableBehaviorBase">
+            <summary>
+            Simplifies operations dealing with dragging an element.
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.IsEnabledProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.DragState.Idle">
+            <summary>
+            The virgin state. Nothing has happened yet.
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.DragState.MouseDown">
+            <summary>
+            The mouse is down, but hasn't moved enough to start dragging
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.DragState.Dragging">
+            <summary>
+            We're dragging folks.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.GetWindow">
+            <summary>
+            Attempts to get the window associated with this user control.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.OnAttached">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.OnDetaching">
+            <summary>
+            Not sure we need this: http://stackoverflow.com/questions/30638292/ondetaching-function-of-behavior-is-not-called
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.StartDrag(System.Windows.Point)">
+            <summary>
+            We're starting a drag operation.
+            </summary>
+            <param name="position"></param>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.ContinueDrag(System.Windows.Point)">
+            <summary>
+            We're still dragging.
+            </summary>
+            <param name="position"></param>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.CancelDrag">
+            <summary>
+            Called when a drag operation is cancelled.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.FinishDrag(System.Windows.Point)">
+            <summary>
+            The drag operation is done - the user has let go of the mouse button.
+            </summary>
+            <param name="position"></param>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.Clicked(System.Windows.Point)">
+            <summary>
+            No drag occurred - the user just clicked the control.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.GetPositionFromMouse(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Override this if you need to change what GetPosition uses for reference.
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.GetRelativePositionFromMouse(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Gets the relative start position from where the user first clicked on the associated object.
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.IsEnabled">
+            <summary>
+            Gets or sets whether this behavior is enabled.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.StartPosition">
+            <summary>
+            Gets the start position
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.RelativeStartPosition">
+            <summary>
+            This is the position relative to the mouse click on the element. This is useful for dragging components to specific locations on the design surface.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.DraggableBehaviorBase.Reset">
+            <summary>
+            Resets the state.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Behaviors.MultiSelectorSelectedItemsBehavior">
+            <summary>
+            Behavior for dealing with multiple selection.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.MultiSelectorSelectedItemsBehavior.OnAttached">
+            <summary>
+            Called after the behavior is attached to an AssociatedObject.
+            </summary>
+            <remarks>
+            Override this to hook up functionality to the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.MultiSelectorSelectedItemsBehavior.OnDetaching">
+            <summary>
+            Called when the behavior is being detached from its AssociatedObject, but before it has actually occurred.
+            </summary>
+            <remarks>
+            Override this to unhook functionality from the AssociatedObject.
+            </remarks>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.MultiSelectorSelectedItemsBehavior.SelectedItemsProperty">
+            <summary>
+            Dependency Property
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.MultiSelectorSelectedItemsBehavior.SelectedItems">
+            <summary>
+            Gets or sets the selected items.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Behaviors.ICloseableViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Cas.Common.WPF.Behaviors.ICloseableViewModel.Close">
+            <summary>
+            Fired when the view model requests that its container be closed.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.ICloseableViewModel.CanClose">
+            <summary>
+            Returns true if the container can be closed, false otherwise.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.ICloseableViewModel.Closed">
+            <summary>
+            Called when the view has been closed.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Behaviors.CloseEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Behaviors.CloseEventArgs.#ctor(System.Nullable{System.Boolean})">
+            <summary>
+            
+            </summary>
+            <param name="dialogResult"></param>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.CloseEventArgs.DialogResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Behaviors.SelectAllOnFocusBehavior">
+            <summary>
+            Selects all text when the textbox receives focus.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Behaviors.AnimateOnChangeBehavior">
+            <summary>
+            Triggers an animation when a value changes.
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.AnimateOnChangeBehavior.ValueProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Behaviors.AnimateOnChangeBehavior.StoryboardProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.AnimateOnChangeBehavior.Value">
+            <summary>
+            That value to monitor for changes.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Behaviors.AnimateOnChangeBehavior.Storyboard">
+            <summary>
+            The storyboard.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Controls.AutoGreyableImage">
+            <summary>
+            Automatically greys the image when IsEnabled == false.
+            </summary>
+            <remarks>
+            http://weblogs.asp.net/thomaslebrun/archive/2009/03/03/wpf-how-to-gray-the-icon-of-a-menuitem.aspx
+            </remarks>
+        </member>
+        <member name="M:Cas.Common.WPF.Controls.AutoGreyableImage.#cctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cas.Common.WPF.Controls.AutoGreyableImage"/> class.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Controls.AutoGreyableImage.OnAutoGreyScaleImageIsEnabledPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when [auto grey scale image is enabled property changed].
+            </summary>
+            <param name="source">The source.</param>
+            <param name="args">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Cas.Common.WPF.Controls.BindablePasswordBox">
+            <summary>
+            Provides a pasword box that can be bound to using MVVM.
+            </summary>
+        </member>
+        <member name="F:Cas.Common.WPF.Controls.BindablePasswordBox.PasswordProperty">
+            <summary>
+            Password Dependency Property.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Controls.BindablePasswordBox.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Controls.BindablePasswordBox.#ctor">
+            <summary>
+            Creates an instance of of the BindablePasswordBox.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Controls.BindablePasswordBox.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Cas.Common.WPF.Converters.CollapsedWhenFalseConverter">
+            <summary>
+            Converts the value to Visibility.Collapsed when false, Visibility.Visible otherwise.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.CollapsedWhenFalseConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.CollapsedWhenFalseConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts back.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.Converters.CollapsedWhenTrueConverter">
+            <summary>
+            Converts the value to Visibility.Collapsed when true, Visibility.Visible otherwise.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.CollapsedWhenTrueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.CollapsedWhenTrueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts back.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.Converters.HiddenWhenFalseConverter">
+            <summary>
+            Converts the value to Hidden when false, Visible otherwise.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.HiddenWhenFalseConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.HiddenWhenFalseConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts back.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.Converters.HiddenWhenTrueConverter">
+            <summary>
+            Converts the boolean to Hidden when true, Visible otherwise.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.HiddenWhenTrueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Converters.HiddenWhenTrueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts back.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.Converters.InvertBooleanConverter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.FileDialogResult">
+            <summary>
+            The result of a FileDialog operation.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.FileDialogResult.FileName">
+            <summary>
+            Gets or sets the filenane that was found in the dialog.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.FileDialogResult.FileNames">
+            <summary>
+            Gets or sets the filesnames that were selected in the dialog.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.FileDialogService">
+            <summary>
+            Implementation of IFileDialogService.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.FileDialogService.ShowOpenFileDialog(Cas.Common.WPF.FileDialogOptions)">
+            <summary>
+            Show the OpenFileDialog.
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.FileDialogService.ShowSaveFileDialog(Cas.Common.WPF.FileDialogOptions)">
+            <summary>
+            Show the SafeFileDialog.
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.Interfaces.IFileDialogService">
+            <summary>
+            Mockable service for displaying Open/SaveFileDialog in an MVVM environment.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.IFileDialogService.ShowOpenFileDialog(Cas.Common.WPF.FileDialogOptions)">
+            <summary>
+            Display a save file dialog.
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.IFileDialogService.ShowSaveFileDialog(Cas.Common.WPF.FileDialogOptions)">
+            <summary>
+            Display a save file dialog.
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.Interfaces.IMessageBoxService">
+            <summary>
+            A mockable interface for displaying standard windows message boxes.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Interfaces.ITextEditService">
+            <summary>
+            Responsible for editing text.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.ITextEditService.EditText(System.String,System.String,System.String,System.Action{System.String},System.Func{System.String,System.Boolean})">
+            <summary>
+            Edits a small piece of text.
+            </summary>
+            <param name="text">The original piece of text.</param>
+            <param name="caption">The caption of the dialog.</param>
+            <param name="title">The title of the dialog.</param>
+            <param name="setter">Invoked if the text is successfully edited.</param>
+            <param name="validate">Optional validation func.</param>
+        </member>
+        <member name="T:Cas.Common.WPF.Interfaces.IViewRegistration">
+            <summary>
+            A registration for a view
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Interfaces.IViewRegistration.ViewModelType">
+            <summary>
+            The type of view model.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.IViewRegistration.CreateView">
+            <summary>
+            Create the view
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.Interfaces.IViewService">
+            <summary>
+            Lightweight framework for MVVM View creation.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.IViewService.ShowDialog``1(``0)">
+            <summary>
+            Shows a modal dialog.
+            </summary>
+            <typeparam name="TViewModel"></typeparam>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.IViewService.Show``1(``0)">
+            <summary>
+            Shows a non modal window.
+            </summary>
+            <typeparam name="TViewModel"></typeparam>
+            <param name="viewModel"></param>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.IViewService.AddRegistration(Cas.Common.WPF.Interfaces.IViewRegistration)">
+            <summary>
+            Add a registration.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.Interfaces.IViewService.RemoveRegistration(Cas.Common.WPF.Interfaces.IViewRegistration)">
+            <summary>
+            Removes a registration.
+            </summary>
+            <param name="registration"></param>
+        </member>
+        <member name="T:Cas.Common.WPF.IViewServiceExtensions">
+            <summary>
+            Extensions for the IViewService interface.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.IViewServiceExtensions.Register``2(Cas.Common.WPF.Interfaces.IViewService)">
+            <summary>
+            Register a view type with the view service.
+            </summary>
+            <typeparam name="TViewModel"></typeparam>
+            <typeparam name="TView"></typeparam>
+            <param name="viewService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.IViewServiceExtensions.Register``2(Cas.Common.WPF.Interfaces.IViewService,System.Func{``1})">
+            <summary>
+            Registers a viewmodel type with a view factory.
+            </summary>
+            <typeparam name="TViewModel"></typeparam>
+            <typeparam name="TView"></typeparam>
+            <param name="viewService"></param>
+            <param name="viewFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.IViewServiceExtensions.Register(Cas.Common.WPF.Interfaces.IViewService,System.Type,System.Func{System.Windows.Window})">
+            <summary>
+            Reigsters a viewmodel type with a view factory.
+            </summary>
+            <param name="viewService"></param>
+            <param name="viewModelType"></param>
+            <param name="viewFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cas.Common.WPF.MessageBoxService">
+            <summary>
+            Implementation of IMessageBoxService.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.SimpleRelayCommand">
+            <summary>
+            This is a simple ICommand implementation based on the MSDN article: https://msdn.microsoft.com/en-us/magazine/dd419663.aspx#id0090030
+            A more robust implementation is available in the MVVM Lite package: http://www.mvvmlight.net/
+            </summary>
+            <remarks>
+            This version is used here for both the OrderedListViewModel and the examples. This way, there are no external dependencies on any particular
+            MVVM framework.
+            </remarks>
+        </member>
+        <member name="T:Cas.Common.WPF.TextEdit.TextEditDialogView">
+            <summary>
+            Interaction logic for RenameDialogView.xaml
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.TextEdit.TextEditDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.ViewRegistration">
+            <summary>
+            This is internal so that callers are encouraged to use the extension methods (e.g. Register).
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.ViewService">
+            <summary>
+            Implementation of IViewService
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.ExtensionProperties.FocusExtension">
+            <summary>
+            Provides a way to set focus via binding from a ViewModel.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.ExtensionProperties.FocusExtension.GetIsFocused(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the IsFocused property.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cas.Common.WPF.ExtensionProperties.FocusExtension.SetIsFocused(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the value of the IsFocused property.
+            </summary>
+            <param name="obj"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:Cas.Common.WPF.ExtensionProperties.FocusExtension.IsFocusedProperty">
+            <summary>
+            Dependency Property.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.FrameworkElementExtensions">
+            <summary>
+            Extensions for FrameworkElements.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.FrameworkElementExtensions.PerformViewModelAction``1(System.Windows.FrameworkElement,System.Action{``0})">
+            <summary>
+            Performs an action on the view model bound to the element's DataContext property.
+            </summary>
+            <param name="frameworkElement"></param>
+            <param name="action"></param>
+            <typeparam name="TViewModel"></typeparam>
+        </member>
+        <member name="M:Cas.Common.WPF.FrameworkElementExtensions.PerformViewModelFunc``2(System.Windows.FrameworkElement,System.Func{``0,``1})">
+            <summary>
+            Performs a func on the view model bound to the element's DataContext property.
+            </summary>
+            <param name="frameworkElement"></param>
+            <param name="func"></param>
+            <typeparam name="TViewModel"></typeparam>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="T:Cas.Common.WPF.ObservableCollectionExtensions">
+            <summary>
+            Extension methods for the ObservableCollection class.
+            </summary>
+        </member>
+        <member name="M:Cas.Common.WPF.ObservableCollectionExtensions.SetCount``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Int32,System.Func{System.Int32,``0})">
+            <summary>
+            Sets the count of an obervable collection.
+            </summary>
+            <param name="collection"></param>
+            <param name="newCount"></param>
+            <param name="itemFactory"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Cas.Common.WPF.ObservableCollectionExtensions.AddRange``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Adds a range of items to the collection.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="collection"></param>
+            <param name="items"></param>
+        </member>
+        <member name="T:Cas.Common.WPF.OrderedListViewModel`1">
+            <summary>
+            Specialized version of the ObservableCollection that facilitates editing an ordered list of items.
+            </summary>
+            <typeparam name="TItemType"></typeparam>
+        </member>
+        <member name="M:Cas.Common.WPF.OrderedListViewModel`1.#ctor(System.Func{`0},System.Collections.Generic.IEnumerable{`0},System.Action{`0},System.Func{`0,System.Boolean},System.Func{`0,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <param name="newItemFactory">Creates a new item for the list.</param>
+            <param name="items">Optionally pass in an initial list of items</param>
+            <param name="addedAction">Action to perform when an item is added.</param>
+            <param name="deleted">Action to perform when an item is deleted.</param>
+            <param name="canDelete">Determines if an item can be deleted. This is called once before the deletion operation is performed.</param>
+        </member>
+        <member name="M:Cas.Common.WPF.OrderedListViewModel`1.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Handles the collection changing.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.MoveUpCommand">
+            <summary>
+            Moves the selected items up.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.MoveDownCommand">
+            <summary>
+            Moves the selected items down.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.DeleteCommand">
+            <summary>
+            Deletes the selected items.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.MoveToTopCommand">
+            <summary>
+            Moves the selected items to the top.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.MoveToBottomCommand">
+            <summary>
+            Moves the selected items to the bottom
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.InsertAboveCommand">
+            <summary>
+            Inserts a new item above the selected items.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.InsertBelowCommand">
+            <summary>
+            Inserts a new item below the selected items.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.SelectedItems">
+            <summary>
+            Use this to bind the selected items in the data grid.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.OrderedListViewModel`1.SelectedEntries">
+            <summary>
+            Gets a typed collection of the selected entries.
+            </summary>
+        </member>
+        <member name="T:Cas.Common.WPF.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Cas.Common.WPF.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

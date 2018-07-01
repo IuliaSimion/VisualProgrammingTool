@@ -1,0 +1,764 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CaptiveAire.VPL.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType">
+            <summary>
+            Binary Operator Types
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.Equals">
+            <summary>
+            Equals (==)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.NotEqual">
+            <summary>
+            Not Equal (!=)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.LessThan">
+            <summary>
+            Less than (&lt;)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.LessThanOrEqual">
+            <summary>
+            Less than or equal (&lt;=)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.GreaterThan">
+            <summary>
+            Greater than (>)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.GreaterThanOrEqual">
+            <summary>
+            Greater than or equal (&gt;=)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.Addition">
+            <summary>
+            Addition (+)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.Subtraction">
+            <summary>
+            Subtraction (-)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.Multiplication">
+            <summary>
+            Multiplication (*)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.Division">
+            <summary>
+            Division operator (/)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.Modulus">
+            <summary>
+            Modulus operator %
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.LogicalAnd">
+            <summary>
+            Logical or bitwise AND (&amp;)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.LogicalXor">
+            <summary>
+            Logical or bitwise XOR (^)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.LogicalOr">
+            <summary>
+            Logical or bitwise OR (|)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.ConditionalAnd">
+            <summary>
+            Logical AND (&amp;&amp;)
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Interfaces.BinaryOperatorOverloadType.ConditionalOr">
+            <summary>
+            Logical OR (||)
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IArgument">
+            <summary>
+            An argument to a function.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IArgument.Id">
+            <summary>
+            The unique id of this argument. At runtime, a variable will be created with this id.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IArgument.Name">
+            <summary>
+            Gets the name of the argument.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IArgument.TypeId">
+            <summary>
+            Gets the type id of the argument.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IBlock">
+            <summary>
+            A block of statements in a compond component.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IBlock.Id">
+            <summary>
+            The id of this block. This is used to persist / match up parameter settings.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IBlocks">
+            <summary>
+            A block to be used in a compound statement.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.ICallStackFrame.Prototype">
+            <summary>
+            Gets the function name formatted with its arguments
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IDeleteable.Delete">
+            <summary>
+            Returns true if the item was deleted, false otherwise.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IDeleteable.CanDelete">
+            <summary>
+            True if the item can be deleted, false otherwise.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IElement">
+            <summary>
+            A programming element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.IsDragging">
+            <summary>
+            Set to true when the element is being dragged.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.Location">
+            <summary>
+            Gets or sets the location of this element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.ElementTypeId">
+            <summary>
+            Gets the ElementTypeId
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElement.GetData">
+            <summary>
+            Gets the custom serialization data for this element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.Parameters">
+            <summary>
+            Gets the parameters for this element
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.Blocks">
+            <summary>
+            Gets the child elements.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.Actions">
+            <summary>
+            Gets the actions associated with this element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.Factory">
+            <summary>
+            Gets the factory that created this element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.Parent">
+            <summary>
+            Gets or sets the parent collection of this element. 
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElement.Owner">
+            <summary>
+            Gets the owner of this element.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IElementAction">
+            <summary>
+            Represents and action that can be applied to a given element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementAction.Name">
+            <summary>
+            The name of the action (for display to the user)
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IElementCreationContext">
+            <summary>
+            The context for creating an element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementCreationContext.Owner">
+            <summary>
+            Gets the element owner.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementCreationContext.Data">
+            <summary>
+            Gets the custom serialization data that was saved for this element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementCreationContext.Factory">
+            <summary>
+            Gets the factory that was used to create the element.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IElementDropTarget">
+            <summary>
+            Handles receiving a dropped element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementDropTarget.IsDraggingOver">
+            <summary>
+            This is available so we know when the element is being dragged over and it can optionally highlight itself.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IElementFactory">
+            <summary>
+            Responsible for creating elements of a given type.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementFactory.ElementTypeId">
+            <summary>
+            Gets the ElementType.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementFactory.Create(CaptiveAire.VPL.Interfaces.IElementCreationContext)">
+            <summary>
+            Creates an element.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementFactory.ElementType">
+            <summary>
+            Gets the runtime type information.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementFactory.ReturnType">
+            <summary>
+            Gets the return type for this elemement (if it has one).
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementFactory.ShowInToolbox">
+            <summary>
+            True to show in the toolbox for direct user creation, false otherwise.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IElementFactoryManager">
+            <summary>
+            Coordinates all of the elementfactories for a scope.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementFactoryManager.GetFactory(System.Guid)">
+            <summary>
+            Gets the factory for a given element type.
+            </summary>
+            <param name="elementTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementFactoryManager.Factories">
+            <summary>
+            Gets all of the factories.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IElementOwner">
+            <summary>
+            Represents an entity that owns elements.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementOwner.Id">
+            <summary>
+            Effectively, the id of the function.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.Add(CaptiveAire.VPL.Interfaces.IElement)">
+            <summary>
+            Add a root level element.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.Remove(CaptiveAire.VPL.Interfaces.IElement)">
+            <summary>
+            Remove a root level element.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementOwner.Variables">
+            <summary>
+            Gets the variables defined for this scope.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.AddVariable(CaptiveAire.VPL.Interfaces.IVariable)">
+            <summary>
+            Adds a variable.
+            </summary>
+            <param name="variable"></param>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.RemoveVariable(CaptiveAire.VPL.Interfaces.IVariable)">
+            <summary>
+            Removes a variable.
+            </summary>
+            <param name="variable"></param>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementOwner.Context">
+            <summary>
+            Gets the service context that was used to create this instance..
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.GetAllElements">
+            <summary>
+            Gets all of the elements in this scope.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.GetRootElements">
+            <summary>
+            Gets all of the root level elements.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.AddArgument(CaptiveAire.VPL.Interfaces.IArgument)">
+            <summary>
+            Adds an argument.
+            </summary>
+            <param name="argument"></param>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.GetArguments">
+            <summary>
+            Get the arguments.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.MarkDirty">
+            <summary>
+            Marks the scope as dirty.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IElementOwner.MarkClean">
+            <summary>
+            Marks the scope as clean.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementOwner.IsDirty">
+            <summary>
+            Returns true if changes have been made to the scope since calling MarkClean, false otherwise.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IElementOwner.SelectionService">
+            <summary>
+            Gets the selection service for this context.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IError.Source">
+            <summary>
+            Gets the source element.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IError.Message">
+            <summary>
+            Gets the message of this item.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IError.Level">
+            <summary>
+            Gets the error level associated with this item.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IErrorSource">
+            <summary>
+            An item that can have errors.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IErrorSource.ClearErrors">
+            <summary>
+            Clears the visual display of an error
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IErrorSource.SetError(System.String)">
+            <summary>
+            Sets the error for this item.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IErrorSource.CheckForErrors">
+            <summary>
+            Checks the item for an errors or warnings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IErrorSource.HasError">
+            <summary>
+            True if there is an error, false otherwise.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IExecutionContext.ExecuteAsync(CaptiveAire.VPL.Interfaces.IFunction,System.Object[],System.Threading.CancellationToken)">
+            <summary>
+            Executes the root function. Call this to begin execution.
+            </summary>
+            <param name="function"></param>
+            <param name="parameters"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IExecutionContext.ExecuteFunctionAsync(System.Guid,System.Object[],System.Threading.CancellationToken)">
+            <summary>
+            Executes a function. To be used by the internal framework. Not intended to be called by consumers.
+            </summary>
+            <param name="functionId"></param>
+            <param name="parameters"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IExecutionContext.ExecuteStatementsAsync(CaptiveAire.VPL.Interfaces.IElements,System.Threading.CancellationToken)">
+            <summary>
+            Executes a list of statements. To be used by the internal framework. Not intended to be called by consumers.
+            </summary>
+            <param name="elements"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IExecutionContext.CallStack">
+            <summary>
+            Gets the call stack for this execution context.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IExecutionContext.RuntimeServices">
+            <summary>
+            The services available at runtime. 
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IFunctionExecutionContextFactory">
+            <summary>
+            This is used to provide runtime context.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IFunctionExecutionContextFactory.Create">
+            <summary>
+            This method will be called before the function executes. When execution stops, Dispose will be called on the created instance. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IFunctionService">
+            <summary>
+            If the plugin supports function calls, this service must be provided.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IFunctionService.GetFunctions">
+            <summary>
+            Get all of the functions.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IFunctionService.GetFunction(System.Guid)">
+            <summary>
+            Load a function given its id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IFunctionService.EditFunction(System.Guid)">
+            <summary>
+            This is used to support "Go To Definition..."
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IOperator">
+            <summary>
+            Implemented by anything that returns a value.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IOperator.EvaluateAsync(CaptiveAire.VPL.Interfaces.IExecutionContext,System.Threading.CancellationToken)">
+            <summary>
+            Evalutes the operator.
+            </summary>
+            <param name="executionContext"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IRuntimeServiceFactory.CreateServices(CaptiveAire.VPL.Interfaces.IVplServiceContext)">
+            <summary>
+            Creaets one or more runtime services. Note that any services that implement IDisposbie will be disposed along with the 
+            IExecutionContext instance.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.ISelectable.GetSiblings">
+            <summary>
+            Gets the container of selectables (contains this selectable).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IStatement">
+            <summary>
+            Represents an executable statement.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IStatement.ExecuteAsync(CaptiveAire.VPL.Interfaces.IExecutionContext,System.Threading.CancellationToken)">
+            <summary>
+            Executs the statement.
+            </summary>
+            <param name="executionContext"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IStatement.IsEnabled">
+            <summary>
+            Gets or sets a value indicating whether this item is enabled or not.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IStatement.Number">
+            <summary>
+            Gets or sets the "line number" of this element. This is actually a hierarchical number.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.ITyped">
+            <summary>
+            Represents something that has a VplType.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.ITyped.Type">
+            <summary>
+            Gets the VplType for this item.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IUndoProvider">
+            <summary>
+            Allows subcomponents of the system editor trigger undo state saves.
+            </summary>
+        </member>
+        <member name="E:CaptiveAire.VPL.Interfaces.IVariable.NameChanged">
+            <summary>
+            To be raised when the name of the variable changes.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVariable.Id">
+            <summary>
+            The id of the variable
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVariable.Name">
+            <summary>
+            Gets or sets the name of the variable
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVariable.Type">
+            <summary>
+            Gets the variable's type.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVariable.Value">
+            <summary>
+            Gets or sets the value of the variable
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVariable.Persist">
+            <summary>
+            
+            Gets a flag indicating whether this variable should be persisted on its own.
+            (e.g. Arguments and Return variables are created automatically)
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IVariableReference">
+            <summary>
+            This is used by variable setters and getters. We look for this when attempting to delete a variable from a function.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVariableReference.VariableId">
+            <summary>
+            Gets the id of the referenced variable
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IVplPlugin">
+            <summary>
+            A plugin.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplPlugin.Name">
+            <summary>
+            Gets the name of the plugin.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplPlugin.Resources">
+            <summary>
+            Gets the custom resources for this plugin.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplPlugin.ElementFactories">
+            <summary>
+            Gets the element factories for this plugin.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplPlugin.Types">
+            <summary>
+            Gets the custom types for this plugin.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplPlugin.Services">
+            <summary>
+            Gets the custom services for this plugin. One use for a custom service is for 
+            accessing global information from an instance of a VplType editor.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplPlugin.RuntimeServiceFactories">
+            <summary>
+            Gets the runtime service factories
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IVplService">
+            <summary>
+            This is the main entrance point for interacting with the VPL environment.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IVplService.EditFunction(CaptiveAire.VPL.Metadata.FunctionMetadata,System.Action{CaptiveAire.VPL.Metadata.FunctionMetadata},System.Boolean,System.String)">
+            <summary>
+            Edits a function.
+            </summary>
+            <param name="metadata"></param>
+            <param name="saveAction"></param>
+            <param name="modal"></param>
+            <param name="displayName">Optional display name of the function.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IVplService.EditFunction(System.Guid,System.Action{CaptiveAire.VPL.Metadata.FunctionMetadata},System.Boolean,System.String,System.Windows.Window)">
+            <summary>
+            Edits a function
+            </summary>
+            <param name="id"></param>
+            <param name="saveAction"></param>
+            <param name="modal"></param>
+            <param name="displayName"></param>
+            <param name="owner"></param>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplService.Types">
+            <summary>
+            Gets all of the types from the system and plugins.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IVplService.CreateExecutionContext">
+            <summary>
+            Creates an execution context
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IVplServiceContext">
+            <summary>
+            Context in which the VPL is edited / executed.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplServiceContext.ElementFactoryManager">
+            <summary>
+            All of the element factories in this context.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplServiceContext.CustomResources">
+            <summary>
+            The custom resources (from plugins).
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplServiceContext.Services">
+            <summary>
+            Custom services that can be optionally provided by plugins.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplServiceContext.Types">
+            <summary>
+            The types available in this context.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplServiceContext.ElementBuilder">
+            <summary>
+            Gets the element builder.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplServiceContext.VplService">
+            <summary>
+            Gets the vpl service for this context.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplServiceContext.Plugins">
+            <summary>
+            Gets the plugins that are available in this context.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IVplType">
+            <summary>
+            Represents a VPL type.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplType.Id">
+            <summary>
+            Gets the unique id for this type.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplType.Name">
+            <summary>
+            Gets the name of this type.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IVplType.CreateVisual">
+            <summary>
+            Creates the visual for editing this type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplType.DefaultValue">
+            <summary>
+            Gets the default value for this type.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplType.NetType">
+            <summary>
+            The .NET type
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Interfaces.IVplTypeConverter">
+            <summary>
+            A type converter for VplTypes
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplTypeConverter.InType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Interfaces.IVplTypeConverter.OutType">
+            <summary>
+            Gets the output type for this conversion
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Interfaces.IVplTypeConverter.Convert(CaptiveAire.VPL.Interfaces.IExecutionContext,System.Object)">
+            <summary>
+            Converts the specified value
+            </summary>
+            <param name="executionContext"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

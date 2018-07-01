@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CaptiveAire.VPL</name>
+    </assembly>
+    <members>
+        <member name="T:CaptiveAire.VPL.Editors.BooleanValueCheckBoxView">
+            <summary>
+            Interaction logic for BooleanValueCheckBoxView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.BooleanValueCheckBoxView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.Int16ValueView">
+            <summary>
+            Interaction logic for Int16ValueView.xaml
+            </summary>
+            <summary>
+            Int16ValueView
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.Int16ValueView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.ByteValueView">
+            <summary>
+            Interaction logic for ByteValueView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.ByteValueView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.DateTimeValueView">
+            <summary>
+            Interaction logic for DateTimeView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.DateTimeValueView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.DoubleValueView">
+            <summary>
+            Interaction logic for DoubleValueView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.DoubleValueView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.Int32ValueView">
+            <summary>
+            Interaction logic for Int32ValueView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.Int32ValueView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.AnyValueView">
+            <summary>
+            Interaction logic for AnyValueView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.AnyValueView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.BooleanValueRadioButtonView">
+            <summary>
+            Interaction logic for BooleanValueView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.BooleanValueRadioButtonView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Editors.TextValueView">
+            <summary>
+            Interaction logic for TextEditorView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Editors.TextValueView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.ExecutionContext">
+            <summary>
+            This class will be instantiated for the lifetime of a function execution. The initial function may
+            call other functions.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Extensions.ElementOwnerExtensions">
+            <summary>
+            Extensions for the IElementOwner type.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetVplTypeOrAny(CaptiveAire.VPL.Interfaces.IElementOwner,System.Guid)">
+            <summary>
+            Gets the specified VplType or throws an exception.
+            </summary>
+            <param name="owner"></param>
+            <param name="vplTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetVplType(CaptiveAire.VPL.Interfaces.IElementOwner,System.Guid)">
+            <summary>
+            Gets the specified VplType or throws an exception.
+            </summary>
+            <param name="owner"></param>
+            <param name="vplTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetVplTypeOrThrow(CaptiveAire.VPL.Interfaces.IElementOwner,System.Guid)">
+            <summary>
+            Gets the specified VplType or throws an exception.
+            </summary>
+            <param name="owner"></param>
+            <param name="vplTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetBooleanType(CaptiveAire.VPL.Interfaces.IElementOwner)">
+            <summary>
+            Gets the Boolean VplType.
+            </summary>
+            <param name="owner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetFloatType(CaptiveAire.VPL.Interfaces.IElementOwner)">
+            <summary>
+            Gets the Float VplType (.net type is double).
+            </summary>
+            <param name="owner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetAnyType(CaptiveAire.VPL.Interfaces.IElementOwner)">
+            <summary>
+            Gets the 'Any' type.
+            </summary>
+            <param name="owner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetStringType(CaptiveAire.VPL.Interfaces.IElementOwner)">
+            <summary>
+            Gets the string VplType.
+            </summary>
+            <param name="owner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetVariable(CaptiveAire.VPL.Interfaces.IElementOwner,System.Guid)">
+            <summary>
+            Gets a variable. If it is not found, null is returned.
+            </summary>
+            <param name="owner"></param>
+            <param name="variableId">The id of the variable.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetVariableOrThrow(CaptiveAire.VPL.Interfaces.IElementOwner,System.Guid)">
+            <summary>
+            Attempts to get the variable with the specified id. If the variable isn't found, an exception is thrown.
+            </summary>
+            <param name="owner">Owner.</param>
+            <param name="variableId">The id of the variable.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.GetService``1(CaptiveAire.VPL.Interfaces.IElementOwner)">
+            <summary>
+            Gets the service of the specified type.
+            </summary>
+            <typeparam name="TService"></typeparam>
+            <param name="owner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.CreateElementCreationContext(CaptiveAire.VPL.Interfaces.IElementOwner,System.Guid,System.String)">
+            <summary>
+            Creates an instance of IElementCreationContext
+            </summary>
+            <param name="owner">The owner.</param>
+            <param name="elementTypeId">The type of element.</param>
+            <param name="data">Optional data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.CreateParameter(CaptiveAire.VPL.Interfaces.IElementOwner,System.String,CaptiveAire.VPL.Interfaces.IVplType,System.String,System.String)">
+            <summary>
+            Creates a parameter.
+            </summary>
+            <param name="owner">Owner.</param>
+            <param name="id">The id of the parameter.</param>
+            <param name="type">The type of parameter.</param>
+            <param name="prefix">Optional prefix</param>
+            <param name="postfix">Optionl postfix</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementOwnerExtensions.CreateBlock(CaptiveAire.VPL.Interfaces.IElementOwner,System.String,System.Object)">
+            <summary>
+            Creates a block.
+            </summary>
+            <param name="owner">Owner.</param>
+            <param name="id">The id of the block.</param>
+            <param name="label">An optional label.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.FunctionExtensions.NumberStatements(CaptiveAire.VPL.Interfaces.IFunction)">
+            <summary>
+            Provide a "line number" for each statement
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ISelectionServiceExtensions.SelectWithKeyboardModifiers(CaptiveAire.VPL.Interfaces.ISelectionService,CaptiveAire.VPL.Interfaces.ISelectable)">
+            <summary>
+            Selects <paramref name="selectable"/> and considers the Control/Shift buttons.
+            </summary>
+            <param name="selectionService"></param>
+            <param name="selectable"></param>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ISelectionServiceExtensions.EnsureSelected(CaptiveAire.VPL.Interfaces.ISelectionService,CaptiveAire.VPL.Interfaces.ISelectable)">
+            <summary>
+            Ensures that the item is selected (no changes are made if the item is already selected).
+            </summary>
+            <param name="selectionService"></param>
+            <param name="selectable"></param>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.FrameworkElementExtensions.HitTestForTopDataContext``1(System.Windows.FrameworkElement,System.Windows.Point)">
+            <summary>
+            Returns the DataContext value of the hits below <paramref name="point"/>.
+            </summary>
+            <typeparam name="TDataContext">The type of DataContext to look for.</typeparam>
+            <param name="rootElement"></param>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.Extensions.ElementExtensions">
+            <summary>
+            Extension methods for elements.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementExtensions.GetReturnType(CaptiveAire.VPL.Interfaces.IElement)">
+            <summary>
+            Gets the return type of an element. If the element is not an operator, Null is returned.
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementExtensions.ForAll(CaptiveAire.VPL.Interfaces.IElements,System.Action{CaptiveAire.VPL.Interfaces.IElement})">
+            <summary>
+            Performs an action on all of the elements in a hierarchy. This includes compound components.
+            </summary>
+            <param name="elements"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.ElementExtensions.AddAction(CaptiveAire.VPL.Element,System.String,System.Action,System.Func{System.Boolean})">
+            <summary>
+            Shortcut for adding an element action.
+            </summary>
+            <param name="element"></param>
+            <param name="name"></param>
+            <param name="execute"></param>
+            <param name="canExecute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Extensions.DependencyObjectExtensions.FindVisualParent``1(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Finds a visual parent by its name and type
+            </summary>
+            <typeparam name="TParent"></typeparam>
+            <param name="reference"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="F:CaptiveAire.VPL.Model.ClipboardUtility.CopyPasteFormat">
+            <summary>
+            The format to use when using the clipboard.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Model.ElementBuilder">
+            <summary>
+            Handles the creation of elements from metadata.
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.Model.Persistor.CurrentMetadataVersion">
+            <summary>
+            This is used to version metadata files so we know how to upgrade them as time goes on and we make changes.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.HierarchicalNumber.CreateNextSibling">
+            <summary>
+            Gets the next hierarchical number at this level.
+            For example, '1.4' begets '1.5'
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.HierarchicalNumber.CreateFirstChild">
+            <summary>
+            Gets the first child of this number.
+            Example '1.4' begets '1.4.1'
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.ElementsView">
+            <summary>
+            Interaction logic for ElementsView.xaml
+            </summary>
+            <summary>
+            ElementsView
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.ElementsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.ArgumentDialogView">
+            <summary>
+            Interaction logic for ArgumentDialogView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.ArgumentDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.ElementResources.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.SelectTypeDialogView">
+            <summary>
+            Interaction logic for SelectTypeDialogView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.SelectTypeDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.VariableView">
+            <summary>
+            Interaction logic for VariableView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.VariableView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.OperatorView">
+            <summary>
+            Interaction logic for BooleanOperatorView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.OperatorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.ParameterView">
+            <summary>
+            Interaction logic for BooleanParameterView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.ParameterView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.CompoundStatementView">
+            <summary>
+            Interaction logic for CompoundStatementView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.CompoundStatementView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.FunctionEditorDialog">
+            <summary>
+            Interaction logic for FunctionEditorDialog.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.FunctionEditorDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.ParametersView">
+            <summary>
+            Interaction logic for ParametersView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.ParametersView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.StatementView">
+            <summary>
+            Interaction logic for StatementView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.StatementView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.View.ToolsView">
+            <summary>
+            Interaction logic for ToolsView.xaml
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.View.ToolsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.VplRuntimeException">
+            <summary>
+            An exception that is generated at runtime.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.VplTypeId">
+            <summary>
+            The 'System' VplType Ids.
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.VplTypeId.Float">
+            <summary>
+            double
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.VplTypeId.Any">
+            <summary>
+            Sort of like 'object' in the .NET framework.
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.VplTypeId.UInt64">
+            <summary>
+            ulong
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.VplTypeId.Int64">
+            <summary>
+            long
+            </summary>
+        </member>
+        <member name="F:CaptiveAire.VPL.VplTypeId.Decimal">
+            <summary>
+            decimal
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.ArgumentVariable.Persist">
+            <summary>
+            Argument variables are created by their argument definitions.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Function.CreateArgument">
+            <summary>
+            Returns a new argument if one was created, false otherwise.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.Statement">
+            <summary>
+            Base class for statements.
+            </summary>
+        </member>
+        <member name="M:CaptiveAire.VPL.Statement.ExecuteCoreAsync(CaptiveAire.VPL.Interfaces.IExecutionContext,System.Threading.CancellationToken)">
+            <summary>
+            To be implemented by inheritors.
+            </summary>
+            <param name="executionContext"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CaptiveAire.VPL.Statement.ExecuteAsync(CaptiveAire.VPL.Interfaces.IExecutionContext,System.Threading.CancellationToken)">
+            <summary>
+            Executes the statement.
+            </summary>
+            <param name="executionContext"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CaptiveAire.VPL.VplType">
+            <summary>
+            Default implementation of the IVplType interface.
+            </summary>
+        </member>
+        <member name="T:CaptiveAire.VPL.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CaptiveAire.VPL.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
